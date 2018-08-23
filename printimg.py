@@ -47,7 +47,8 @@ def printimg(img_name: str):
 def main():
     parser = argparse.ArgumentParser(description='''
         Prints images given as filenames at the best available size via `lp`.
-        Sizes are determined via an internal hard-coded list.
+        Sizes are chosen from an internal hard-coded list, although I could
+        probably parse lpoptions -l.
         ''')
     parser.add_argument('images', metavar='IMAGE', nargs=argparse.REMAINDER)
     parser.add_argument('-v', '--version', action='version', version=__version__)
